@@ -1,0 +1,228 @@
+@import url(https://fonts.googleapis.com/css?family=Amatic+SC|Dancing+Script:700|Open+Sans:400,300,400italic,700);
+.screen-reader-text {
+  display: none; }
+
+#page {
+  overflow-x: hidden;
+  overflow-y: auto; }
+
+body, html {
+  color: #fdfdfd;
+  background: #170507;
+  background: linear-gradient(25deg, #170507, #400F13);
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.6rem;
+  background-attachment: fixed; }
+
+a, a:visited {
+  color: #D93A2B;
+  text-decoration: none; }
+  a:hover, a:visited:hover {
+    color: #dd4e41;
+    text-decoration: underline; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Dancing Script", cursive;
+  font-size: 3rem; }
+  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    color: #fdfdfd;
+    text-decoration: none; }
+
+h2 {
+  font-size: 2.5rem; }
+
+h3 {
+  font-size: 2rem; }
+
+h4 {
+  font-size: 1.5rem; }
+
+h5, h6 {
+  font-size: 1.25rem; }
+
+.site-header {
+  text-align: center;
+  display: flex;
+  width: 100%;
+  align-items: center; }
+  .site-header h1 {
+    margin: 0; }
+
+.site-title a {
+  display: block;
+  max-width: 250px;
+  height: auto;
+  transform: scale(0.9);
+  transition: transform 0.35s cubic-bezier(0, 1.59, 1, 0.91); }
+  .site-title a svg {
+    width: 100%;
+    height: auto; }
+  .site-title a:hover {
+    transform: scale(1.1); }
+
+.who {
+  display: none;
+  font-family: "Dancing Script", cursive;
+  font-size: 3rem;
+  margin: 0 auto; }
+  .who .and {
+    transform: scale(4);
+    margin: 2rem 0;
+    opacity: .1;
+    display: inline-block; }
+
+a #logo-svg {
+  fill: #D93A2B; }
+
+a:hover #logo-svg {
+  fill: #e5766c; }
+
+#content {
+  min-height: 100vh; }
+
+#content, .site-header {
+  max-width: 840px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 2rem; }
+
+#site-navigation {
+  padding-left: 5vw;
+  font-family: "Amatic SC", cursive;
+  font-size: 2rem; }
+  #site-navigation ul {
+    display: flex;
+    justify-content: center; }
+  #site-navigation li {
+    position: relative;
+    padding: 0; }
+    #site-navigation li:after {
+      position: absolute;
+      display: block;
+      content: " ";
+      opacity: 0;
+      background: #027368;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      top: 0;
+      z-index: 10;
+      transform: rotate(-5deg);
+      transition: opacity .15s ease-in-out;
+      box-shadow: 3px 3px 0 0 #012824, 3px 3px 3px rgba(17, 17, 17, 0.25); }
+    #site-navigation li:nth-child(odd):after {
+      transform: rotate(5deg); }
+    #site-navigation li:hover:after {
+      opacity: 1; }
+  #site-navigation a {
+    display: block;
+    font-weight: 300;
+    color: #fdfdfd;
+    position: relative;
+    z-index: 20;
+    padding: .5rem;
+    opacity: .75;
+    transition: all .15s ease-in-out; }
+    #site-navigation a:hover {
+      text-decoration: none;
+      text-shadow: 0 0 3px white;
+      opacity: 1; }
+
+.site-footer {
+  min-height: 100vh;
+  background: #001916;
+  padding: 2rem;
+  position: relative;
+  z-index: 20; }
+  .site-footer a {
+    color: #03a595; }
+
+.entry-meta {
+  font-size: .75rem;
+  opacity: .5;
+  transition: opacity .15s ease-in-out;
+  text-transform: uppercase; }
+  .entry-meta:hover {
+    opacity: 1; }
+
+.home .site-header {
+  display: block; }
+  .home .site-header .who {
+    display: block;
+    margin-bottom: 4rem;
+    margin-top: 4rem; }
+.home .site-title a {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto; }
+.home .entry-title {
+  display: none; }
+
+.home-block {
+  position: relative;
+  z-index: 10;
+  padding: 4rem;
+  margin: 0; }
+  @media screen and (min-width: 825px) {
+    .home-block {
+      padding-right: 275px; }
+      .home-block:nth-child(odd) {
+        padding-right: 4rem;
+        padding-left: 275px; } }
+  .home-block h2 {
+    display: inline-block; }
+  .home-block h2 > span {
+    padding: 0.5rem;
+    background: #D93A2B;
+    display: inline-block;
+    box-shadow: 3px 3px 0 0 #9c271c;
+    transform: rotate(-5deg) translateX(-3vw); }
+  .home-block h3 {
+    font-family: "Amatic SC", cursive; }
+  .home-block:before, .home-block:after {
+    display: block;
+    content: " ";
+    max-height: 1px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0; }
+  .home-block:after {
+    top: 1px;
+    bottom: 0;
+    max-height: none;
+    max-width: 1px;
+    left: auto;
+    border-top: 0;
+    border-right: 1px solid rgba(255, 255, 255, 0.1); }
+  .home-block:nth-child(odd):after {
+    left: 0;
+    right: auto; }
+  .home-block:first-child:before {
+    right: -100vw; }
+  .home-block:last-child:after {
+    bottom: -100vh; }
+  .home-block .icon {
+    width: 250px;
+    margin: 0 auto 2rem;
+    opacity: .5;
+    transition: opacity .25s ease-in-out; }
+    @media screen and (min-width: 825px) {
+      .home-block .icon {
+        float: right;
+        margin-right: -300px;
+        margin-left: 2rem; } }
+  @media screen and (min-width: 825px) {
+    .home-block:nth-child(odd) .icon {
+      float: left;
+      margin-right: 2rem;
+      margin-left: -300px; } }
+  .home-block svg {
+    width: 100%;
+    height: auto; }
+  .home-block:hover .icon {
+    opacity: 1; }
+
+/*# sourceMappingURL=setup.css.map */

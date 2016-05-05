@@ -1,0 +1,41 @@
+$white: #fdfdfd;
+$black: #111;
+$color-1: #027368;
+$color-2: #D93A2B;
+$color-3: #400F13;
+
+$border-color: rgba(white, .1);
+
+$theme-url: "/wp-content/themes/ourdurhamwedding/";
+
+$bounce: cubic-bezier(0,1.59,1,.91);
+
+$spacing-small: .5rem;
+$spacing-medium: 1rem;
+$spacing: 2rem;
+$spacing-large: 4rem;
+
+$heading-stack: 'Dancing Script', cursive;
+$font-stack: 'Open Sans', sans-serif;
+$nav-stack: 'Amatic SC', cursive;
+
+// Ryan's favorite mediaquery mixins!
+// I typically use this one because I design mobile-first
+@mixin mqAfterSize($width) {
+    @media screen and (min-width: $width) {
+        @content;
+    }
+}
+
+@mixin mqBeforeSize($width) {
+    @media screen and (max-width: $width) {
+        @content;
+    }
+}
+
+@import url(https://fonts.googleapis.com/css?family=Amatic+SC|Dancing+Script:700|Open+Sans:400,300,400italic,700);
+
+@import 
+        "animations.scss",
+        "global.scss",
+        "home.scss";
