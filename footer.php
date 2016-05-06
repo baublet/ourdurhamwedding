@@ -14,7 +14,9 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="footer-inner">
 		<?php get_sidebar(); ?>
+		</div><!-- .footer-inner -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

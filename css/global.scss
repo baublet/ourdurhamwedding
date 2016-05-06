@@ -7,11 +7,10 @@
 body,html {
     color: $white;
     background: darken($color-3, 10);
-    background: linear-gradient(25deg, darken($color-3, 10), $color-3);
+    background: linear-gradient(25deg, darken($color-3, 15), darken($color-3, 5));
     font-family: $font-stack;
     font-size: 16px;
     line-height: 1.6rem;
-    background-attachment: fixed;
 }
 
 a, a:visited {
@@ -86,7 +85,7 @@ a:hover #logo-svg {
     min-height: 100vh;
 }
 
-#content, .site-header {
+#content, .site-header, .footer-inner {
     max-width: 840px;
     margin-right: auto;
     margin-left: auto;
@@ -144,14 +143,39 @@ a:hover #logo-svg {
     }
 }
 
+.footer-inner {
+    min-width: 1024px;
+}
+
 .site-footer {
+    font-size: .9rem;
     min-height: 100vh;
     background: darken($color-1, 18);
     padding: $spacing;
     position: relative;
     z-index: 20;
+    display: flex;
+    align-items: center;
+    ul {
+        margin-left: 0;
+        padding-left: 1.25rem;
+    }
     a {
         color: lighten($color-1, 10);
+    }
+    aside {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        justify-content: center;
+        h2 {
+            font-family: $nav-stack;
+        }
+        section {
+            width: 30%;
+            padding: 0 $spacing;
+            min-width: 320px;
+        }
     }
 }
 
