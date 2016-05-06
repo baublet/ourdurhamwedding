@@ -29,6 +29,9 @@
             padding-left: 275px;
         }
     }
+    &.full {
+        padding: $spacing-large;
+    }
     h2 {
         display: inline-block;
     }

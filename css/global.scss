@@ -188,3 +188,49 @@ a:hover #logo-svg {
         opacity: 1;
     }
 }
+
+.icon.img, figure {
+    background: darken($white, 5);
+    background: linear-gradient(-25deg, #aaa 1%, #fdfdfd 5%);
+    padding: $spacing-small;
+    opacity: 1 !important;
+    box-shadow: 3px 3px 5px 0 rgba(black, .5);
+    border-radius: 3px;
+    position: relative;
+    z-index: 20;
+    img {
+        border: 1px solid rgba(black, .1);
+        margin-bottom: $spacing;
+        width: 100%;
+    }
+    figcaption {
+        font-family: $heading-stack;
+        color: $black;
+        padding: $spacing-small;
+        padding-bottom: 0;
+        font-size: 1.3rem;
+        line-height: 1.3rem;
+    }
+}
+figure img {margin-bottom: 0;}
+
+.read-more {
+    background: $color-1;
+    text-decoration: none;
+    display: inline-block;
+    padding: $spacing-small;
+    font-size: .65rem;
+    color: $white !important;
+    text-transform: uppercase;
+    box-shadow: 1px 1px 0 0 darken($color-1, 10);
+    margin-top: "-" + $spacing;
+    transition: all .3s $bounce;
+    &:hover {
+        color: $white;
+        text-decoration: none;
+        transform: translate(0, -15px) rotate(-3deg);
+        box-shadow: 5px 5px 0 0 darken($color-1, 10);
+    }
+}
+
+.post-edit-link {display:none;}
