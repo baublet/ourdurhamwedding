@@ -234,3 +234,100 @@ figure img {margin-bottom: 0;}
 }
 
 .post-edit-link {display:none;}
+
+.timeline {
+    margin-top: $spacing-large;
+    position: relative;
+    &:before {
+        display: block;
+        content: " ";
+        width: 1px;
+        border-right: 1px solid $border-color;
+        position: absolute;
+        top: 0;
+        bottom: -100%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &:after {
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        height: 0;
+    }
+    .day {
+        clear: both;
+        text-align: center;
+        h2 {
+            text-align: center;
+            width: 75%;
+            min-width: 250px;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: $spacing-medium;
+            background: $color-2;
+            display: inline-block;
+            box-shadow: 3px 3px 0 0 darken($color-2, 15);
+            transform: rotate(-3deg) translateY(-1rem);
+        }
+    }
+    .event {
+        width: 45%;
+        float: left;
+        clear: left;
+        h3 {
+            display: inline-block;
+            font-family: $nav-stack;
+            font-size: 2rem;
+            float: right;
+            position: relative;
+            margin-bottom: $spacing-small;
+            &:before {
+                display: block;
+                content: " ";
+                position: absolute;
+                left: 105%;
+                right: -2.35rem;
+                top: 50%;
+                transform: translateY(-50%);
+                border-top: 1px solid $border-color;
+            }
+        }
+        h4 {
+            float: right;
+            display: inline-block;
+            padding: $spacing-small;
+            background: $color-1;
+            box-shadow: 3px 3px 0 0 darken($color-1, 15);
+            margin-top: 0;
+            a {
+                color: $white;
+            }
+        }
+        div {
+            clear: both;
+        }
+        &:nth-child(odd) {
+            float: right;
+            clear: right;
+            h3 {
+                float: left;
+                &:before {
+                    left: -2.35rem;
+                    right: 105%;
+                }
+            }
+            h4 {
+                float: left;
+            }
+        }
+    }
+    .event + .event {
+        padding-top: $spacing-large;
+    }
+    .event + .day {
+        padding: $spacing-large 0;
+    }
+}

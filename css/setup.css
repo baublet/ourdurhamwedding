@@ -209,6 +209,86 @@ figure img {
 .post-edit-link {
   display: none; }
 
+.timeline {
+  margin-top: 4rem;
+  position: relative; }
+  .timeline:before {
+    display: block;
+    content: " ";
+    width: 1px;
+    border-right: 1px solid rgba(255, 255, 255, 0.25);
+    position: absolute;
+    top: 0;
+    bottom: -100%;
+    left: 50%;
+    transform: translateX(-50%); }
+  .timeline:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0; }
+  .timeline .day {
+    clear: both;
+    text-align: center; }
+    .timeline .day h2 {
+      text-align: center;
+      width: 75%;
+      min-width: 250px;
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 1rem;
+      background: #D93A2B;
+      display: inline-block;
+      box-shadow: 3px 3px 0 0 #9c271c;
+      transform: rotate(-3deg) translateY(-1rem); }
+  .timeline .event {
+    width: 45%;
+    float: left;
+    clear: left; }
+    .timeline .event h3 {
+      display: inline-block;
+      font-family: "Amatic SC", cursive;
+      font-size: 2rem;
+      float: right;
+      position: relative;
+      margin-bottom: 0.5rem; }
+      .timeline .event h3:before {
+        display: block;
+        content: " ";
+        position: absolute;
+        left: 105%;
+        right: -2.35rem;
+        top: 50%;
+        transform: translateY(-50%);
+        border-top: 1px solid rgba(255, 255, 255, 0.25); }
+    .timeline .event h4 {
+      float: right;
+      display: inline-block;
+      padding: 0.5rem;
+      background: #027368;
+      box-shadow: 3px 3px 0 0 #012824;
+      margin-top: 0; }
+      .timeline .event h4 a {
+        color: #fdfdfd; }
+    .timeline .event div {
+      clear: both; }
+    .timeline .event:nth-child(odd) {
+      float: right;
+      clear: right; }
+      .timeline .event:nth-child(odd) h3 {
+        float: left; }
+        .timeline .event:nth-child(odd) h3:before {
+          left: -2.35rem;
+          right: 105%; }
+      .timeline .event:nth-child(odd) h4 {
+        float: left; }
+  .timeline .event + .event {
+    padding-top: 4rem; }
+  .timeline .event + .day {
+    padding: 4rem 0; }
+
 .home .site-header {
   display: block; }
   .home .site-header .who {
@@ -259,7 +339,7 @@ figure img {
     display: block;
     content: " ";
     max-height: 1px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
     position: absolute;
     top: 0;
     right: 0;
@@ -271,7 +351,7 @@ figure img {
     max-width: 1px;
     left: auto;
     border-top: 0;
-    border-right: 1px solid rgba(255, 255, 255, 0.1); }
+    border-right: 1px solid rgba(255, 255, 255, 0.25); }
   .home-block:nth-child(odd):after {
     left: 0;
     right: auto; }
